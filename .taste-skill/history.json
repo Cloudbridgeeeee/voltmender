@@ -1,0 +1,20 @@
+{
+ "palettes": [
+  "soot-pale-lime"
+ ],
+ "types": [
+  "host"
+ ],
+ "dealt": [
+  "host",
+  "funnel",
+  "urbanist"
+ ],
+ "moments": [
+  {
+   "id": "word-highlight",
+   "at": "2026-11-25T02:41:10.728Z",
+   "seed": "ad294b12"
+  }
+ ]
+}

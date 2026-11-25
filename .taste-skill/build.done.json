@@ -1,0 +1,11 @@
+{
+ "page": "dist/index.html",
+ "dir": "/home/user/voltmender",
+ "kind": "software",
+ "start": "2026-11-25T02:41:10.629Z",
+ "by": "start.mjs",
+ "url": null,
+ "root": "dist",
+ "category": "maintenance analytics software",
+ "primary": "Request a pilot"
+}

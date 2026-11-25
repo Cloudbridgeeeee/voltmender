@@ -1,0 +1,62 @@
+
+
+/* the frame's painted ground when WebGL is not there: sky, far hills, a lit near hill */
+.hero__window { background:
+  radial-gradient(120% 60% at 70% 118%, #6f7f3a 0 40%, transparent 41%),
+  radial-gradient(90% 50% at 10% 108%, #57703f 0 42%, transparent 43%),
+  radial-gradient(80% 40% at 60% 92%, #9fb2c4 0 40%, transparent 41%),
+  linear-gradient(#5f93cc, #a9c7e4 70%, #c8d6dd); }
+.d-win--dark .d-win__body { grid-template-columns: 250px 1fr; min-height: 420px; }
+.d-win--dark .d-win__bar b { color: #eceef0; font-weight: 500; } .d-win--dark .d-win__bar .sp { flex: 1; }
+/* the exchange stands in the window's top 260px: one-line question, the tool line, a two-line answer, its actions */
+.hero__window .d-chat { padding: 14px 18px; gap: 8px; }
+.hero__window .d-msg--me small { display: none; }
+.hero__window .d-msg--bot { max-width: 86%; }
+.hero__window .d-msg--bot small { display: inline; margin: 0 0 0 8px; white-space: nowrap; }
+@media (max-width: 639px) { .hero__window .d-win__bar .sp ~ span { display: none; } }
+.inbox { border-right: 1px solid rgb(255 255 255 / .07); padding: 10px; display: grid; align-content: start; gap: 2px; }
+.inbox .q { height: 34px; margin-bottom: 6px; border-radius: 9px; background: rgb(255 255 255 / .06); display: flex; align-items: center; padding: 0 10px; color: #7d8389; font-size: 13px; }
+.inbox .t { display: grid; grid-template-columns: 30px 1fr auto; gap: 1px 10px; padding: 9px 8px; border-radius: 9px; font-size: 13px; }
+.inbox .t.is-on { background: rgb(255 255 255 / .07); }
+.inbox .t i { grid-row: 1 / span 2; width: 30px; height: 30px; border-radius: 50%; display: grid; place-items: center; font: 600 13px/1 var(--font-text); font-style: normal; color: #0c0d0f; }
+.inbox .t b { font-weight: 500; color: #eceef0; } .inbox .t time { color: #7d8389; font-size: 13px; }
+.inbox .t span { grid-column: 2 / -1; color: #8d9399; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.convo { display: grid; min-width: 0; align-content: start; }
+.d-msg--bot { background: #22262b; color: #e9ecee; }
+.acts { display: flex; gap: 8px; } .acts span { height: 30px; padding: 0 12px; border-radius: 99px; display: inline-flex; align-items: center; font-size: 13px; font-weight: 500; background: #f2f2f0; color: #0c0d0f; }
+.acts span + span { background: rgb(255 255 255 / .08); color: #e9ecee; }
+/* the numbers section: three cards, each number over its own inset panel on the hero's painted ground */
+.stat-cards .card { --c-text: var(--muted); }
+.stat-cards strong { display: block; font: var(--display-weight) var(--t-stat)/1 var(--font-display); letter-spacing: var(--display-tracking); font-stretch: var(--display-stretch); }
+.stat-cards .card > p { margin-top: var(--s-3); }
+.stat-cards .panel { --p-h: 236px; background:
+  radial-gradient(120% 60% at 70% 118%, #6f7f3a 0 40%, transparent 41%),
+  radial-gradient(90% 50% at 10% 108%, #57703f 0 42%, transparent 43%),
+  linear-gradient(#5f93cc, #a9c7e4 70%, #c8d6dd); }
+.stat-cards .panel::before { display: none; }
+.stat-cards .stage > .at-rise { --ax: 20px; --ay: 28px; --fit-max: 300px; }
+.d-pane { background: #17191c; color: #e9ecee; border-radius: 12px; padding: 14px 16px; font: 400 13px/1.4 var(--font-text); box-shadow: 0 0 0 1px rgb(255 255 255 / .08), 0 20px 40px -20px rgb(0 0 0 / .7); }
+.d-pane h5 { margin: 0 0 10px; font: 500 13px/1.3 var(--font-text); color: #aeb3b8; }
+.d-split { display: flex; height: 8px; border-radius: 99px; overflow: hidden; gap: 2px; margin-bottom: 12px; }
+.d-split i { display: block; height: 100%; } .d-legend { display: grid; gap: 6px; }
+.d-legend span { display: flex; align-items: center; gap: 8px; } .d-legend span::before { content: ""; width: 8px; height: 8px; border-radius: 2px; background: var(--c); }
+.d-legend b { margin-left: auto; font-weight: 500; color: #fff; font-variant-numeric: tabular-nums; }
+.d-times { display: grid; } .d-times span { display: flex; justify-content: space-between; padding: 7px 0; border-top: 1px solid rgb(255 255 255 / .07); }
+.d-times span:first-child { border-top: 0; } .d-times b { font-weight: 500; color: #fff; font-variant-numeric: tabular-nums; }
+.d-quote { margin: 0; font-size: 14px; color: #fff; } .d-quote + small { display: block; margin-top: 8px; color: #9aa0a6; }
+.d-stars { display: flex; gap: 2px; margin-bottom: 8px; color: #f3c98b; } .d-stars svg { width: 14px; height: 14px; }
+/* three cards across from 1024 (their fragments are made to fit a 220px panel, so the kit's 1024-1279
+   two-up rule for span-4 panels is not needed: these cards carry no span class); text beside the panel
+   from 640 to 1023; stacked with a 148px panel on a phone: the section stays one screen (1.3 at most) */
+.stat-cards > .card { grid-column: 1 / -1; }
+@media (min-width: 1024px) { .stat-cards > .card { grid-column: auto / span 4; } }
+@media (min-width: 640px) and (max-width: 1023px) {
+  .stat-cards > .card { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); grid-auto-rows: min-content; column-gap: var(--s-6); align-content: start; }
+  .stat-cards > .card > :not(.panel) { grid-column: 1; }
+  .stat-cards > .card > .panel { grid-column: 2; grid-row: 1 / span 4; --p-h: 208px; margin: calc(var(--c-gap) - var(--c-pad)) calc(var(--c-gap) - var(--c-pad)) calc(var(--c-gap) - var(--c-pad)) 0; border-radius: calc(var(--c-r) - var(--c-gap)); }
+}
+@media (max-width: 639px) { .stat-cards .panel { --p-h: 148px; } .stage > .at-rise { --ay-sm: 20px; } .stat-cards > .card > .panel { margin-top: var(--s-5); } }
+@media (max-width: 639px) { .d-win--dark .d-win__body { grid-template-columns: 1fr; } .inbox { display: none; } .hero__window .d-chat { font-size: 13px; padding: 12px 14px; } }
+/* a phone keeps the exchange inside the frame (its draft note and the tool line go, so the whole answer ends
+   above the fade) and two of the four times in the 148px panel */
+@media (max-width: 639px) { .hero__window .d-msg--bot small, .hero__window .d-tool { display: none; } .stat-cards .d-times span:nth-child(n+3) { display: none; } }

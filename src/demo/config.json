@@ -1,0 +1,171 @@
+{
+  "name": "VoltMender",
+  "primary": "Request a pilot",
+  "accent": "#dafa9c",
+  "ink": "#ffffff",
+  "bg": "#0f0f0f",
+  "surface": "#1a1a1a",
+  "fontLink": "<link href=\"https://fonts.googleapis.com/css2?family=Host+Grotesk:wght@400..700&family=JetBrains+Mono:wght@400..500&display=swap\" rel=\"stylesheet\">",
+  "fontDisplay": "\"Host Grotesk\", system-ui, sans-serif",
+  "fontText": "\"Host Grotesk\", system-ui, sans-serif",
+  "client": "Ikeja plant, Lagos",
+  "note": "A fixed site of 42 assets. Results here come from fixed data in your browser; no AI service is called.",
+  "tabs": {
+    "overview": "Site",
+    "records": "Assets",
+    "queue": "Alerts to review"
+  },
+  "overview": {
+    "title": "Ikeja plant equipment",
+    "kpis": [
+      [
+        "Monitored assets",
+        "42"
+      ],
+      [
+        "Open alerts",
+        "5"
+      ],
+      [
+        "Recurring faults",
+        "2"
+      ],
+      [
+        "Inspections due",
+        "3"
+      ]
+    ],
+    "chart": {
+      "title": "Alerts per week, last 8 weeks",
+      "labels": [
+        "W1",
+        "W2",
+        "W3",
+        "W4",
+        "W5",
+        "W6",
+        "W7",
+        "W8"
+      ],
+      "values": [
+        3,
+        5,
+        4,
+        7,
+        6,
+        4,
+        8,
+        5
+      ],
+      "threshold": 6,
+      "thresholdLabel": "Team capacity 6 a week",
+      "caption": "Weeks above the line had more alerts than the team could inspect."
+    }
+  },
+  "records": {
+    "title": "Assets",
+    "searchHint": "Asset or reading",
+    "statusCol": 3,
+    "columns": [
+      "Asset",
+      "Type",
+      "Reading",
+      "Status",
+      "Value",
+      "Last service"
+    ],
+    "tones": {
+      "Recurring": "bad",
+      "Review": "warn",
+      "Normal": "good"
+    },
+    "rows": [
+      [
+        "Transformer T2",
+        "Transformer",
+        "Oil temperature",
+        "Recurring",
+        "91°C",
+        "Nov 3"
+      ],
+      [
+        "Capacitor bank CB-2",
+        "Capacitor bank",
+        "Power factor",
+        "Recurring",
+        "0.81",
+        "Oct 28"
+      ],
+      [
+        "Switchboard MSB-1",
+        "Switchboard",
+        "Phase imbalance",
+        "Review",
+        "14%",
+        "Aug 14"
+      ],
+      [
+        "Motor M7",
+        "Motor",
+        "Current draw",
+        "Review",
+        "38 A",
+        "Sep 2"
+      ],
+      [
+        "Transformer T1",
+        "Transformer",
+        "Oil temperature",
+        "Normal",
+        "68°C",
+        "Oct 9"
+      ],
+      [
+        "Generator G1",
+        "Generator",
+        "Load",
+        "Normal",
+        "72%",
+        "Nov 12"
+      ],
+      [
+        "Pump motor P3",
+        "Motor",
+        "Vibration",
+        "Normal",
+        "3.2 mm/s",
+        "Nov 20"
+      ]
+    ]
+  },
+  "queue": {
+    "title": "Alerts waiting for a technician",
+    "lead": "Each alert lists the readings and work orders behind it. Nothing is closed until a technician reviews it.",
+    "items": [
+      {
+        "id": "t2",
+        "title": "Transformer T2: oil temperature 91°C",
+        "detail": "Third overheat in 30 days.",
+        "reason": "Each overheat followed a cooling fan repair within six weeks."
+      },
+      {
+        "id": "cb2",
+        "title": "Capacitor bank CB-2: power factor 0.81",
+        "detail": "Below 0.9 for 9 of the last 14 days.",
+        "reason": "Fuses replaced twice in 60 days."
+      },
+      {
+        "id": "msb1",
+        "title": "Switchboard MSB-1: phase imbalance 14%",
+        "detail": "Rising since October.",
+        "reason": "Imbalance above 10% for four days running."
+      },
+      {
+        "id": "m7",
+        "title": "Motor M7: current 38 A against 32 A rated",
+        "detail": "Conveyor drive, rising for 14 days.",
+        "reason": "Current draw up 19% with no change in line speed."
+      }
+    ]
+  }
+}
